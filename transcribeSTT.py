@@ -144,9 +144,8 @@ def on_close(ws):
     
     print(transcript)
     
-    file = open("the record.txt", "w")
-    file.write("".join([x['results'][0]['alternatives'][0]['transcript']
-                          for x in FINALS]))
+    file = open("output.txt", "w")
+    file.write(transcript)
     file.close
     
     
